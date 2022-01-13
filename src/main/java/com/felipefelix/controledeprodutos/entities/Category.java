@@ -1,5 +1,6 @@
 package com.felipefelix.controledeprodutos.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import java.io.Serializable;
@@ -14,6 +15,7 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
+    @JsonIgnore
     private List<Product> products = new ArrayList<>();
 
     public Category(Long id, String name) {
