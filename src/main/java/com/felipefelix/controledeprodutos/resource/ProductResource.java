@@ -1,8 +1,6 @@
 package com.felipefelix.controledeprodutos.resource;
 
-import com.felipefelix.controledeprodutos.entities.Category;
 import com.felipefelix.controledeprodutos.entities.Product;
-import com.felipefelix.controledeprodutos.repositories.CategoryRepository;
 import com.felipefelix.controledeprodutos.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,19 +16,19 @@ import java.util.List;
 public class ProductResource {
 
     @Autowired
-    private ProductRepository categoryRepository;
+    private ProductRepository productRepository;
 
     //anotação GetMapping faz com que o metodo seja a resposta
     // para a requisição HTTP de get
     @GetMapping //define o metodo como a resposta ao comando HTTP de get
     public ResponseEntity<List<Product>> findAll(){
-        List<Product> list = categoryRepository.findAll();
+        List<Product> list = productRepository.findAll();
         return  ResponseEntity.ok() //ResponseEntity define a resposta de uma forma mais bonitinha
                 .body(list);
     }
     @GetMapping("/{id}")
     public ResponseEntity<Product> findById(@PathVariable Long id){
-        Product cat = categoryRepository.findById(id);
+        Product cat = productRepository.findById(id).get();
         return ResponseEntity.ok()
                 .body(cat);
     }

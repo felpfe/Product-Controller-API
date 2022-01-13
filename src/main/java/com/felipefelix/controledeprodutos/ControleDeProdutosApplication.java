@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
 
@@ -27,23 +28,23 @@ public class ControleDeProdutosApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Category cat1 = new Category(1L, "Eletronics");
-		Category cat2 = new Category(2L, "Books");
-		Category cat3 = new Category(3L, "Food");
-		Category cat4 = new Category(4L, "Cleanning");
-		Category cat5 = new Category(5L, "Personalization");
-		Category cat7 = new Category(7L, "Convenience");
-		Category cat8 = new Category(8L, "Construction Material");
+		Category cat1 = new Category(null, "Eletronics");
+		Category cat2 = new Category(null, "Books");
+		Category cat3 = new Category(null, "Food");
+		Category cat4 = new Category(null, "Cleanning");
+		Category cat5 = new Category(null, "Personalization");
+		Category cat7 = new Category(null, "Convenience");
+		Category cat8 = new Category(null, "Construction Material");
 
-		Product p1 = new Product(1L, "TV", 2200.00, cat1);
-		Product p2 = new Product(2L, "Alice in Wonderland", 30.00, cat2);
-		Product p3 = new Product(3L, "Rice", 8.00, cat3);
-		Product p4 = new Product(4L, "Soap", 0.99, cat4);
-		Product p5 = new Product(5L, "Paint", 10.00, cat5);
-		Product p6 = new Product(6L, "Coca-cola 500ml", 3.00, cat7);
-		Product p7 = new Product(7L, "Tiles", 10.00, cat8);
-		Product p8 = new Product(8L, "PC", 1800.00, cat1);
-		Product p9 = new Product(9L, "Notebook", 2800.00, cat1);
+		Product p1 = new Product(null, "TV", 2200.00, cat1);
+		Product p2 = new Product(null, "Alice in Wonderland", 30.00, cat2);
+		Product p3 = new Product(null, "Rice", 8.00, cat3);
+		Product p4 = new Product(null, "Soap", 0.99, cat4);
+		Product p5 = new Product(null, "Paint", 10.00, cat5);
+		Product p6 = new Product(null, "Coca-cola 500ml", 3.00, cat7);
+		Product p7 = new Product(null, "Tiles", 10.00, cat8);
+		Product p8 = new Product(null, "PC", 1800.00, cat1);
+		Product p9 = new Product(null, "Notebook", 2800.00, cat1);
 
 		cat1.getProducts().addAll(Arrays.asList(p1, p8, p9));
 		cat2.getProducts().addAll(Arrays.asList(p2));
