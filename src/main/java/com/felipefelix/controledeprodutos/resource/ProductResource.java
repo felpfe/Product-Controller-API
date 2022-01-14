@@ -1,13 +1,11 @@
 package com.felipefelix.controledeprodutos.resource;
 
+import com.felipefelix.controledeprodutos.entities.Category;
 import com.felipefelix.controledeprodutos.entities.Product;
 import com.felipefelix.controledeprodutos.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +23,11 @@ public class ProductResource {
         List<Product> list = productRepository.findAll();
         return  ResponseEntity.ok() //ResponseEntity define a resposta de uma forma mais bonitinha
                 .body(list);
+    }
+    @RequestMapping("/newProduct")
+    @PostMapping
+    public void inserir(@RequestBody Product product){
+        productRepository.save(product);
     }
     @GetMapping("/{id}")
     public ResponseEntity<Product> findById(@PathVariable Long id){

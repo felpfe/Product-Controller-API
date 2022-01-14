@@ -71,5 +71,6 @@ public class ControleDeProdutosApplication implements CommandLineRunner {
 		productRepository.save(p7);
 		productRepository.save(p8);
 		productRepository.save(p9);
+
 	}
 }
