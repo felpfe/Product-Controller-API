@@ -1,5 +1,8 @@
-Product Controller API
-=================
+<h4 align="center"> 
+	🚧  API Product Controller 🚀 Em construção...  🚧
+</h4>
+
+
 <!--ts-->
    * [Sobre](#Sobre)
    * [O que verá?](#O-que-verá)
@@ -13,6 +16,7 @@ Product Controller API
 Sobre 
 =================
 <p align="center">Esse projeto consiste de uma API de controle de produtos utilizando SpringBoot e arquitetura Rest. Os produtos podem ser adicionados e/ou consultado na API por meio de metodos HTTP: GET, POST, DELETE(em desenvolvimento...)</p>
+
 
 
 O que verá? 
@@ -31,4 +35,11 @@ Requisitos
 
 Passo-a-passo 
 =================
+
+### Autor
+---
+  Feito com ❤️ por Felipe Felix de Almeida 👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Felipe-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/felipe-felix-0729371a7/) 
+[![Gmail Badge](https://img.shields.io/badge/-felipe1felixalmeida@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:felipe1felixalmeida@gmail.com)
 
