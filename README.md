@@ -3,6 +3,7 @@
 </h4>
 
 
+
 <!--ts-->
    * [Sobre](#Sobre)
    * [O que verá?](#O-que-verá)
@@ -35,7 +36,30 @@ Requisitos
 
 Passo-a-passo 
 =================
+* Para criar um novo produto 
+	- Utilize o método post na URL: http://localhost:8080/Products/newProduct
+	- No corpo da requisição insira os dados do produto como o exemplo a seguir:
+<p align="center">
+	{
+    "name": "Iphone 8",
+        "price": 2800.0,
+        "category": {
+            "id": 1,
+            "name": "Eletronics"
+        }
+	}
+	</p>
+	
+* Para criar uma nova categoria 
+	- Utilize o método post na URL: http://localhost:8080/categories/newCategorie
+	- No corpo da requisição insira os dados da categoria como o exemplo a seguir:
+<p align="center">
+{
+    "name":"Eletronics"
+}
+</p>
 
+* OBS.: O id tanto de produtos quanto de categorias novas é gerado automaticamente e serializado pelo código do próprio programa, sendo apenas essencial passar o id da categoria a qual o novo produto pertence no momento da criação de um novo produto.
 ### Autor
 ---
   Feito com ❤️ por Felipe Felix de Almeida 👋🏽 Entre em contato!
