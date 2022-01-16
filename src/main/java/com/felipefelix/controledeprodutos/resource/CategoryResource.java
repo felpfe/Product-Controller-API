@@ -1,6 +1,7 @@
 package com.felipefelix.controledeprodutos.resource;
 
 import com.felipefelix.controledeprodutos.entities.Category;
+import com.felipefelix.controledeprodutos.entities.Product;
 import com.felipefelix.controledeprodutos.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +27,15 @@ public class CategoryResource {
 
     @RequestMapping("/newCategorie")
     @PostMapping
-    public void inserir(@RequestBody Category category){
+    public void inserirCategory(@RequestBody Category category){
         categoryRepository.save(category);
+
+    }
+
+    @RequestMapping("/delete")
+    @DeleteMapping
+    public void categoryDelete(@RequestBody Category category){
+        categoryRepository.delete(category);
     }
 
     @GetMapping("/{id}")

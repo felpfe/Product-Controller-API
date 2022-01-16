@@ -2,11 +2,13 @@ package com.felipefelix.controledeprodutos.resource;
 
 import com.felipefelix.controledeprodutos.entities.Category;
 import com.felipefelix.controledeprodutos.entities.Product;
+import com.felipefelix.controledeprodutos.repositories.CategoryRepository;
 import com.felipefelix.controledeprodutos.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController //faz com que o spring reconheça a classe como um serviço
@@ -15,6 +17,7 @@ public class ProductResource {
 
     @Autowired
     private ProductRepository productRepository;
+
 
     //anotação GetMapping faz com que o metodo seja a resposta
     // para a requisição HTTP de get
@@ -29,10 +32,18 @@ public class ProductResource {
     public void inserir(@RequestBody Product product){
         productRepository.save(product);
     }
+
+    @RequestMapping("/delete")
+    @DeleteMapping
+    public void deletar(@RequestBody Product product){
+        productRepository.delete(product);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Product> findById(@PathVariable Long id){
         Product cat = productRepository.findById(id).get();
         return ResponseEntity.ok()
                 .body(cat);
     }
+
 }

@@ -36,23 +36,6 @@ public class ControleDeProdutosApplication implements CommandLineRunner {
 		Category cat7 = new Category(null, "Convenience");
 		Category cat8 = new Category(null, "Construction Material");
 
-		Product p1 = new Product(null, "TV", 2200.00, cat1);
-		Product p2 = new Product(null, "Alice in Wonderland", 30.00, cat2);
-		Product p3 = new Product(null, "Rice", 8.00, cat3);
-		Product p4 = new Product(null, "Soap", 0.99, cat4);
-		Product p5 = new Product(null, "Paint", 10.00, cat5);
-		Product p6 = new Product(null, "Coca-cola 500ml", 3.00, cat7);
-		Product p7 = new Product(null, "Tiles", 10.00, cat8);
-		Product p8 = new Product(null, "PC", 1800.00, cat1);
-		Product p9 = new Product(null, "Notebook", 2800.00, cat1);
-
-		cat1.getProducts().addAll(Arrays.asList(p1, p8, p9));
-		cat2.getProducts().addAll(Arrays.asList(p2));
-		cat3.getProducts().addAll(Arrays.asList(p3));
-		cat4.getProducts().addAll(Arrays.asList(p4));
-		cat5.getProducts().addAll(Arrays.asList(p5));
-		cat7.getProducts().addAll(Arrays.asList(p6));
-		cat8.getProducts().addAll(Arrays.asList(p7));
 
 		categoryRepository.save(cat1);
 		categoryRepository.save(cat2);
@@ -61,16 +44,6 @@ public class ControleDeProdutosApplication implements CommandLineRunner {
 		categoryRepository.save(cat5);
 		categoryRepository.save(cat7);
 		categoryRepository.save(cat8);
-
-		productRepository.save(p1);
-		productRepository.save(p2);
-		productRepository.save(p3);
-		productRepository.save(p4);
-		productRepository.save(p5);
-		productRepository.save(p6);
-		productRepository.save(p7);
-		productRepository.save(p8);
-		productRepository.save(p9);
 
 	}
 }
