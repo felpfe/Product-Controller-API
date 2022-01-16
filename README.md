@@ -59,7 +59,24 @@ Passo-a-passo
 }
 </p>
 
-* OBS.: O id tanto de produtos quanto de categorias novas é gerado automaticamente e serializado pelo código do próprio programa, sendo apenas essencial passar o id da categoria a qual o novo produto pertence no momento da criação de um novo produto.
+* Para deletar uma categoria/produto:
+	- Utilize o método DELETE na URL: http://localhost:8080/categories/delete
+	- No corpo da requisição insira os dados da categoria/produto como o exemplo a seguir:
+<p align="center"> {"id": 1,
+ "name": "Eletronics"} </p>
+
+<p align="center">
+- Ou para produtos: 
+	
+	{"name": "Iphone 8",
+        "price": 2800.0,
+        "category": {
+            "id": 1,
+            "name": "Eletronics"}}
+	
+</p>
+
+* OBS.: O id tanto de produtos quanto de categorias novas é gerado automaticamente e serializado pelo código do próprio programa, sendo apenas essêncial passar o id da categoria a qual o produto pertence no momento da criação de um novo produto.
 ### Autor
 ---
   Feito com ❤️ por Felipe Felix de Almeida 👋🏽 Entre em contato!
