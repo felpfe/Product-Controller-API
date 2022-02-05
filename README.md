@@ -1,5 +1,5 @@
 <h4 align="center"> 
-	🚧  API Product Controller 🚀 Em construção...  🚧
+	🚧  API Product Controller 🚀 Finalizada 🚧
 </h4>
 
 
