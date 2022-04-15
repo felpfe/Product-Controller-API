@@ -1,6 +1,8 @@
 package com.felipefelix.controledeprodutos.entities;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.*;
 
@@ -17,6 +19,7 @@ public class Product implements Serializable {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
 
     public Product() {
     }
@@ -37,7 +40,7 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
+    public String getName(String notebook) {
         return name;
     }
 

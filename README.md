@@ -77,6 +77,10 @@ Passo-a-passo
 </p>
 
 * OBS.: O id tanto de produtos quanto de categorias novas é gerado automaticamente e serializado pelo código do próprio programa, sendo apenas essêncial passar o id da categoria a qual o produto pertence no momento da criação de um novo produto.
+<p>
+A documentação da API também pode ser obtida acessando o link: 
+http://localhost:8080/swagger-ui/index.html#/product-resource/deletar_2
+</p>
 ### Autor
 ---
   Feito com ❤️ por Felipe Felix de Almeida 👋🏽 Entre em contato!

@@ -25,6 +25,7 @@ public class CategoryResource {
                 .body(list);
     }
 
+
     @RequestMapping("/newCategorie")
     @PostMapping
     public void inserirCategory(@RequestBody Category category){
